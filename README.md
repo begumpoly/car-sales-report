@@ -22,7 +22,11 @@ The objective is to transform raw transactional data into meaningful business in
 - **Azure Databricks**: For data ingestion, transformation (ETL), and exploratory analysis
 - **Azure Synapse SQL**: For structured querying and optimized data warehousing
 - **Power BI**: For creating dynamic, interactive visualizations and business dashboards
+- This project showcases how cloud-based tools can streamline data workflows and deliver deep insights into automotive market trends and customer behavior.
+- 
+![Screenshot 2025-06-09 165726](https://github.com/user-attachments/assets/9c534c13-b8b5-44eb-9a09-d24be299318b)
 
 ---
 
-This project showcases how cloud-based tools can streamline data workflows and deliver deep insights into automotive market trends and customer behavior.
+
+
