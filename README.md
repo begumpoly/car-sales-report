@@ -102,6 +102,13 @@ Below is a **PySpark script** demonstrating essential data cleaning steps before
 ## 📌 Date Format Conversion  
 The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting. 
 
+## 📌 Date Format Conversion  
+The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting.
+
+```python
+df = df.withColumn("Date", to_date(col("Date"), "M/d/yyyy"))
+
+
 
 
 
