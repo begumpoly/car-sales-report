@@ -61,15 +61,31 @@ This ensures that Databricks securely interacts with Azure **without exposing cr
 Below is a **PySpark configuration snippet**, demonstrating how to set up **Azure Data Lake Storage authentication** in **Databricks**.  
 
 ![Azure Data Lake Access Setup]!  
-(![Screenshot 2025-06-10 105153](https://github.com/user-attachments/assets/9d2bc243-ff34-4889-9875-5e3cf1b8f3d2)
+![Screenshot 2025-06-10 105153](https://github.com/user-attachments/assets/9d2bc243-ff34-4889-9875-5e3cf1b8f3d2)
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
-
 ### **🔍 Key Configuration Details**  
 ✅ **Storage Account Key Authentication**: Ensures direct access to Azure Data Lake.  
 ✅ **Securely Enables Databricks to Read/Write Data**: Critical for large-scale processing in PySpark.  
 ✅ **Supports Data Pipelines for Synapse SQL & Power BI**: Seamless integration for analytics.  
+## ⚡ PySpark Data Ingestion from Azure  
 
+Below is a **PySpark script** used to load raw **car sales data** from **Azure Blob Storage** into a DataFrame in **Databricks**.  
+
+![PySpark Data Ingestion](path/to/image.png)  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)
+
+
+### **🔍 Code Breakdown**  
+✅ Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
+✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
+✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.  
+
+Example code from the image:  
+```python
+df = spark.read.format("csv").option("header", "true").load(
+    "abfss://car-sales-data@carsalesreport.dfs.core.windows.net/raw-data/"
+)
+df.show()
 
 
 
