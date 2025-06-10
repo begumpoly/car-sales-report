@@ -48,7 +48,7 @@ The objective is to transform raw transactional data into meaningful business in
  **Azure Databricks** → Data ingestion, ETL, and exploratory analysis
 ## 🔐 PySpark OAuth Configuration  
 
-Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  ![PySpark Authentication Setup](path/to/image.png) 
+Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  ![PySpark Authentication Setup] 
 ```
 spark.conf.set("fs.azure.account.auth.type.<storage-account>.dfs.core.windows.net", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type.<storage-account>.dfs.core.windows.net", 
