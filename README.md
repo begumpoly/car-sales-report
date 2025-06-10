@@ -60,7 +60,7 @@ This ensures that Databricks securely interacts with Azure **without exposing cr
 
 Below is a **PySpark configuration snippet**, demonstrating how to set up **Azure Data Lake Storage authentication** in **Databricks**.  
 
-![Azure Data Lake Access Setup]!  
+![Azure Data Lake Access Setup]!(path/to/image.png)  
 ![Screenshot 2025-06-10 105153](https://github.com/user-attachments/assets/9d2bc243-ff34-4889-9875-5e3cf1b8f3d2)
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
