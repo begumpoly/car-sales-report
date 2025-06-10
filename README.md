@@ -101,7 +101,8 @@ Below is a **PySpark script** demonstrating essential data cleaning steps before
 The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting. 
 ## 📌 Schema Overview  
 Below is the schema of the **PySpark DataFrame** used in this project, displaying column names, data types, and nullability.
-![Schema]![Screenshot 2025-06-10 140354](https://github.com/user-attachments/assets/9edfc865-4447-4cba-ab26-49b1a626545e)
+![Schema]!
+[Screenshot 2025-06-10 140354](https://github.com/user-attachments/assets/9edfc865-4447-4cba-ab26-49b1a626545e)
 
 
 
