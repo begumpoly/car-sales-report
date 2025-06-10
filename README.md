@@ -143,6 +143,34 @@ Below is a sample **code snippet** used to generate the pie chart:
 
 ![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/e793f4be-088f-41d4-975e-3bca1255130b)
 
+## 👥 Visual Breakdown: Sales by Gender
+
+The following **pie chart** shows the distribution of car sales based on **buyer gender**.
+
+![Car Sales by Gender](path/to/gender_pie_chart.png)
+
+
+### 🔍 Key Observations
+
+- **Male buyers** account for the dominant share of sales at **78.5%**.  
+- **Female buyers** represent the remaining **21.5%** of car sales.
+
+This breakdown provides useful insight into the **gender composition** of car buyers.
+
+---
+![Screenshot 2025-06-10 142920](https://github.com/user-attachments/assets/c98810b1-e91c-4789-a913-1c3b42208e7c)
+
+## 🧾 Code Snippet (Chart Generation Logic)
+
+Below is a sample **code snippet** used to generate the pie charts for this analysis:
+
+![Code Snippet - Pie Chart Generation](path/to/code_snippet_image.png)
+![Screenshot 2025-06-10 145054](https://github.com/user-attachments/assets/1a79441c-5c6a-4926-a7ed-671015efe95f)
+
+---
+
+Feel free to explore the code and visuals to better understand the trends in car sales by **region** and **gender**.
+
 
 
 
