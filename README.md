@@ -86,7 +86,7 @@ The code initializes Spark settings with the **Azure Storage account key**, enab
 
 Below is a **PySpark script** used to load raw **car sales data** from **Azure Blob Storage** into a DataFrame in **Databricks**.  
 
-![PySpark Data Ingestion](path/to/image.png)  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
+![PySpark Data Ingestion]  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
 
 # 🚗 Car Sales Data Processing in PySpark
 
