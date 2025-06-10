@@ -264,7 +264,9 @@ sns.boxplot(x="Gender", y="Price", data=df.toPandas(), palette="coolwarm")
 plt.title("Car Price Preferences by Gender")
 plt.xlabel("Gender")
 plt.ylabel("Price ($)")
-plt.show()'''
+plt.show()
+```
+
 
 ## 💎 Luxury Car Purchases by Gender
 
