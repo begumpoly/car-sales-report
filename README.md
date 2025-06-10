@@ -197,18 +197,74 @@ Below is a sample **code snippet** used to generate the pie charts for this anal
 
 ---
 ![Screenshot 2025-06-10 142938](https://github.com/user-attachments/assets/526034d7-92cc-425d-99e3-a35194e607b7)
+## 📊 Total Car Sales by Company
 
-Feel free to explore the code and visuals to better understand the trends in car sales by **region**, **gender**, and **body style**.
+The bar chart shows total car sales for various companies.  
+**Chevrolet** leads with over 1750 units sold, followed by **Toyota** and **Nissan** with sales above 1500.
 
-
-
-
-
-
-
+![Total Car Sales by Company](images/total_car_sales_bar_chart.png)
+![Screenshot 2025-06-10 150323](https://github.com/user-attachments/assets/103d1bb4-35fd-407b-afe6-bf89cad5ffd7)
 
 
+Key observations:
 
+- Moderate sales from **Oldsmobile**, **Lexus**, and **Mercedes-Benz**.  
+- Lower sales for **Infiniti**, **Jaguar**, **Saab**, and **Subaru**.
+
+This visualization highlights the sales performance across different car manufacturers.
+
+---
+
+## 🧾 Code Snippet
+
+Sample code used to generate the bar chart, including data aggregation and plotting.
+
+![Code Snippet](images/code_snippet.png)
+
+![Screenshot 2025-06-10 150414](https://github.com/user-attachments/assets/973c78f0-1bc8-4d6e-abb1-ff0c2f80cad7)
+
+
+![Screenshot 2025-06-10 150904](https://github.com/user-attachments/assets/d6cd4a9a-2e97-49dc-b185-1f52f418456d)
+
+## 📈 Scatter Plot of Price ($) vs Annual Income
+
+The scatter plot shows most car purchases occur at lower prices (under $40,000) and incomes (below 0.2 units).  
+There’s a wide price range across income levels, with little strong correlation between income and car price, highlighted by a red trend line and some outliers.
+
+![Scatter Plot - Price vs Income](images/price_vs_income_scatter.png)
+
+![Screenshot 2025-06-10 150947](https://github.com/user-attachments/assets/6f212df5-58a8-4ebb-aca6-b503c98e2627)
+Feel free to explore the code and visuals to better understand the trends in car sales by **region**, **gender**, and **body style**, **Annual Income**.
+## 🧾 Code Snippet
+
+Sample code used to generate the scatter plot.
+
+![Code Snippet](images/code_snippet.png)
+
+![Screenshot 2025-06-10 151923](https://github.com/user-attachments/assets/fa7b6fda-544c-42ea-a101-46189f66848b)
+## 📊 Car Price Preferences by Gender
+
+The box plot shows median car prices around $20,000–$25,000 for both genders, with similar purchase ranges.  
+Both male and female buyers have outliers at higher prices (up to $80,000+), indicating some buy more expensive cars.
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(12,6))
+sns.boxplot(x="Gender", y="Price", data=df.toPandas(), palette="coolwarm")
+
+plt.title("Car Price Preferences by Gender")
+plt.xlabel("Gender")
+plt.ylabel("Price ($)")
+plt.show()
+
+
+![Car Price by Gender](images/car_price_by_gender_boxplot.png)
+
+
+
+![Screenshot 2025-06-10 152031](https://github.com/user-attachments/assets/c1d75f05-af14-4afa-b8a1-2facc331ced9)
 
 
 
