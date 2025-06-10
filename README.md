@@ -119,22 +119,29 @@ Below is the schema of the **PySpark DataFrame** used in this project, displayin
 - 
 # Car Sales Distribution by Dealer Region
 
-This repository provides a visual representation of car sales distributed across various dealer regions, showcased through a pie chart.
+Below is a **visual breakdown** of car sales across various **dealer regions**, presented in the form of a **pie chart** for quick and effective insight.
+
+![Car Sales Distribution Pie Chart](path/to/pie_chart.png)
+
+![Screenshot 2025-06-10 143157](https://github.com/user-attachments/assets/09cf3d0f-3210-4564-80ed-0b924688d858)
 
 ## Overview
 
-The pie chart illustrates the percentage contribution of each dealer region to the total car sales. Key insights include:
+The chart illustrates the **percentage contribution** of each dealer region to the total car sales. Notable insights include:
 
-- **Janesville** holds the largest share, accounting for **15.8%** of total sales.  
+- **Janesville** leads with **15.8%** of total sales.  
 - **Scottsdale** and **Aurora** follow with **14.3%** and **13.2%** respectively.  
-- **Pasco**, **Greenville**, and **Middletown** display comparable sales figures, contributing **13.1%** and **13.0%** each.
+- **Pasco**, **Greenville**, and **Middletown** each contribute between **13.0% – 13.1%**.
 
-This visualization offers a clear perspective on regional sales performance, aiding in data-driven analysis and strategic planning.
-![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/e793f4be-088f-41d4-975e-3bca1255130b)![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/63983444-d79c-4285-ac48-1b6044c174de)
+This visualization provides a clear perspective on **regional sales performance**, helping stakeholders identify high-performing areas and uncover opportunities for growth.
 
+## Code Snippet (Visualization Logic)
 
+Below is a sample **code snippet** used to generate the pie chart:
 
+![Code for Generating Pie Chart](path/to/code_image.png)
 
+![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/e793f4be-088f-41d4-975e-3bca1255130b)
 
 
 
