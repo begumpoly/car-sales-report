@@ -107,7 +107,6 @@ The script applies key transformations, including:
 - **Date Format Conversion:** Converts string-based dates into a proper `DateType` for optimized filtering.  
 - **Encoding Fixes:** Removes unwanted characters from text fields like `Engine`.  
 - **Schema Validation:** Confirms correct column data types before database ingestion.  
-
 ---
 
 ### 📌 Date Format Conversion  
