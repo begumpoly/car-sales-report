@@ -97,16 +97,14 @@ Below is a **PySpark script** demonstrating essential data cleaning steps before
 - **Encoding Fixes:** Removes unwanted characters from text fields like `Engine`.  
 - **Schema Validation:** Confirms correct column data types before database ingestion.  
 
----
-
 ## 📌 Date Format Conversion  
 The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting. 
+## 📌 Schema Overview  
+Below is the schema of the **PySpark DataFrame** used in this project, displaying column names, data types, and nullability.
+![Schema]![Screenshot 2025-06-10 140354](https://github.com/user-attachments/assets/9edfc865-4447-4cba-ab26-49b1a626545e)
 
-## 📌 Date Format Conversion  
-The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting.
 
-```python
-df = df.withColumn("Date", to_date(col("Date"), "M/d/yyyy"))
+
 
 
 
