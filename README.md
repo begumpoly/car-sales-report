@@ -46,7 +46,8 @@ The objective is to transform raw transactional data into meaningful business in
 
 Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  
 
-![PySpark Authentication Setup](path/to/image.png)  
+![PySpark Authentication Setup]![Screenshot 2025-06-10 103954](https://github.com/user-attachments/assets/c978ae98-c39f-4e66-9d79-89521f2a09e0)
+
 
 The script initializes authentication using **Azure Active Directory**, specifying:  
 - **Authentication Type:** OAuth  
@@ -54,8 +55,14 @@ The script initializes authentication using **Azure Active Directory**, specifyi
 - **Client ID & Secret:** Used for authentication  
 - **OAuth Endpoint URL:** Connects to Azure’s login system  
 
-This ensures that Databricks securely interacts with Azure **without exposing credentials directly** in queries.  
----
+This ensures that Databricks securely interacts with Azure **without exposing credentials directly** in queries. 
+
+
+
+
+
+
+
 
 
 
