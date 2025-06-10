@@ -247,6 +247,13 @@ Sample code used to generate the scatter plot.
 The box plot shows median car prices around $20,000–$25,000 for both genders, with similar purchase ranges.  
 Both male and female buyers have outliers at higher prices (up to $80,000+), indicating some buy more expensive cars.
 
+![Car Price by Gender](images/car_price_by_gender_boxplot.png)
+
+
+
+![Screenshot 2025-06-10 152031](https://github.com/user-attachments/assets/c1d75f05-af14-4afa-b8a1-2facc331ced9)
+Try the code below to generate the box plot showing car price preferences by gender:
+
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -257,14 +264,39 @@ sns.boxplot(x="Gender", y="Price", data=df.toPandas(), palette="coolwarm")
 plt.title("Car Price Preferences by Gender")
 plt.xlabel("Gender")
 plt.ylabel("Price ($)")
-plt.show()
+plt.show()'''
+## 💎 Luxury Car Purchases by Gender
+
+The bar chart highlights the difference in luxury car purchases by gender.  
+Male buyers account for over 2000 units, while female buyers show significantly lower totals (around 500–600).  
+This chart highlights a notable disparity in luxury car purchasing between genders, with males dominating this segment.
+
+![Luxury Car Purchases by Gender](images/luxury_car_purchases_by_gender.png)
+
+Try the code below to generate this bar chart:
 
 
-![Car Price by Gender](images/car_price_by_gender_boxplot.png)
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Define luxury car brands
+luxury_brands = ["Cadillac", "BMW", "Mercedes-Benz", "Audi", "Lexus"]
+
+# Filter DataFrame for luxury cars
+df_luxury = df.filter(df["Company"].isin(luxury_brands))
+
+# Group by gender and count
+sales_by_gender_luxury = df_luxury.groupBy("Gender").count().toPandas()
+
+# Plotting
+sns.barplot(x="Gender", y="count", data=sales_by_gender_luxury, palette="coolwarm")
+plt.title("Luxury Car Purchases by Gender")
+plt.xlabel("Gender")
+plt.ylabel("Total Sales")
+plt.show()'''
 
 
-
-![Screenshot 2025-06-10 152031](https://github.com/user-attachments/assets/c1d75f05-af14-4afa-b8a1-2facc331ced9)
 
 
 
