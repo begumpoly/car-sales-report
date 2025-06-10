@@ -299,6 +299,29 @@ plt.xlabel("Gender")
 plt.ylabel("Total Sales")
 plt.show()
 ```
+## 🚗 Average Car Price by Gender
+
+The bar chart illustrates the average car price by gender.  
+Both female and male buyers spend approximately $27,500 on average, suggesting nearly identical overall spending.  
+This chart provides insight into average purchase behavior, regardless of luxury preferences.
+
+![Average Car Price by Gender](images/average_car_price_by_gender.png)
+
+![Screenshot 2025-06-10 155243](https://github.com/user-attachments/assets/12ad93c1-7e6b-4cdd-8d8d-487e7360176e)
+
+Try the code below to generate this visualization:
+
+```
+from pyspark.sql.functions import avg
+
+avg_price_by_gender = df.groupBy("Gender").agg(avg("Price").alias("Avg_Price")).toPandas()
+
+sns.barplot(x="Gender", y="Avg_Price", data=avg_price_by_gender, palette="coolwarm")
+plt.title("Average Car Price by Gender")
+plt.xlabel("Gender")
+plt.ylabel("Avg Price ($)")
+plt.show()
+```
 
 
 
