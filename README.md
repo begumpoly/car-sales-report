@@ -478,6 +478,67 @@ plt.legend(title="Body Style & Gender")
 plt.show()
 ```
 
+## Data Transformation
+
+This section covers the process of transforming raw data using PySpark. After reading the data from Azure Data Lake Storage, you can perform various data cleansing, filtering, and aggregation operations before saving the processed data back to the lake.
+
+Below is an example illustrating how to read the raw data, apply transformations, and configure the connection securely.
+
+---
+
+# Azure Data Lake Storage with PySpark
+
+This example shows how to:
+
+- Initialize a Spark session
+- Read data from Azure Data Lake Storage Gen2 (ADLS Gen2)
+- Configure Spark to authenticate using your storage account key
+
+---
+
+## Prerequisites
+
+- Apache Spark installed with PySpark
+- Access to an Azure Data Lake Storage Gen2 account
+- Storage account key (handled securely, **do not** hardcode it in production)
+
+---
+
+## Usage
+
+Replace the placeholder `<your-storage-account-key>` in the code with your actual storage account key. For security, consider using environment variables or Azure Key Vault instead of hardcoding keys.
+
+```python
+# Import necessary libraries
+from pyspark.sql import SparkSession
+
+# Initialize Spark session
+spark = SparkSession.builder.appName("DataLakeWrite").getOrCreate()
+
+# Load your DataFrame (replace path with your actual data location)
+df = spark.read.csv(
+    "abfss://<container>@<storage-account>.dfs.core.windows.net/raw-data/",
+    header=True,
+    inferSchema=True
+)
+
+# Define the storage account and container path
+storage_account = "<storage-account>"
+container = "<container>"
+data_path = f"abfss://{container}@{storage_account}.dfs.core.windows.net/transformed-data/your-data-folder"
+
+# Configure authentication with the storage account key
+spark.conf.set(
+    f"fs.azure.account.key.{storage_account}.dfs.core.windows.net",
+    "<your-storage-account-key>"
+)
+
+# Write DataFrame to Azure Data Lake Storage
+df.write.option("header", 'true').csv(data_path)
+
+print("Data successfully written to Azure Data Lake Storage!")
+
+
 
 
 
