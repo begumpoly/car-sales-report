@@ -24,9 +24,38 @@ The objective is to transform raw transactional data into meaningful business in
 - **Power BI**: For creating dynamic, interactive visualizations and business dashboards
 - This project showcases how cloud-based tools can streamline data workflows and deliver deep insights into automotive market trends and customer behavior.
 - 
-![Screenshot 2025-06-09 165726](https://github.com/user-attachments/assets/9c534c13-b8b5-44eb-9a09-d24be299318b)
+
+![Screenshot 2025-06-09 231810](https://github.com/user-attachments/assets/ace3aa47-9bb5-4200-bf5b-9a2f25e4a39a)
+
 
 ---
+![Screenshot 2025-06-09 225832](https://github.com/user-attachments/assets/6b42be6d-e6b9-4eaf-8af3-084e01dacd06)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
