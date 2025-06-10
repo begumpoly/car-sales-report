@@ -44,9 +44,7 @@ The objective is to transform raw transactional data into meaningful business in
 
 ## 🔐 PySpark OAuth Configuration  
 
-Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  
-
-![PySpark Authentication Setup](path/to/image.png) 
+Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  ![PySpark Authentication Setup](path/to/image.png) 
 ![Screenshot 2025-06-10 103954](https://github.com/user-attachments/assets/c978ae98-c39f-4e66-9d79-89521f2a09e0)
 
 
@@ -75,8 +73,6 @@ Below is a **PySpark script** used to load raw **car sales data** from **Azure B
 
 ![PySpark Data Ingestion](path/to/image.png)  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
 
-
-
 🚗### 🔹 Loading Raw Data from Azure  
 The following script reads a CSV file into **PySpark**, ensuring proper data structure.  
 
@@ -93,7 +89,7 @@ df.show()
 ✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
 ✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.
 
-# 🚗 Car Sales Data Cleaning & Schema Validation  
+### 🚗 Car Sales Data Cleaning & Schema Validation  
 
 Before loading data into **Synapse SQL**, we apply **data type conversions** and **encoding corrections** to ensure structured and optimized storage for analysis.  
 
@@ -119,7 +115,6 @@ df = df.withColumn("Date", to_date(col("Date"), "M/d/yyyy"))
 
 
 ![Screenshot 2025-06-10 132054](https://github.com/user-attachments/assets/048be149-1c36-481f-b578-945e21def4fc)
-
 
 
 
