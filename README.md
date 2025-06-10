@@ -26,7 +26,7 @@ The objective is to transform raw transactional data into meaningful business in
 - **Power BI**: For creating dynamic, interactive visualizations and business dashboards
 - This project showcases how cloud-based tools can streamline data workflows and deliver deep insights into automotive market trends and customer behavior.
 
-## 🚀 Getting Started  
+##  Getting Started  
 
 ![flowchart](https://github.com/user-attachments/assets/a237644e-0654-4db6-9bf5-c667e3d3739d)
 
@@ -57,7 +57,7 @@ The script initializes authentication using **Azure Active Directory**, specifyi
 - **OAuth Endpoint URL:** Connects to Azure’s login system  
 
 This ensures that Databricks securely interacts with Azure **without exposing credentials directly** in queries. 
-## 🚀 Azure Data Lake Access Configuration in Databricks  
+##  Azure Data Lake Access Configuration in Databricks  
 
 Below is a **PySpark configuration snippet**, demonstrating how to set up **Azure Data Lake Storage authentication** in **Databricks**.  
 
@@ -65,7 +65,7 @@ Below is a **PySpark configuration snippet**, demonstrating how to set up **Azur
 ![Screenshot 2025-06-10 105153](https://github.com/user-attachments/assets/9d2bc243-ff34-4889-9875-5e3cf1b8f3d2)
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
-### **🔍 Key Configuration Details**  
+🚗### **🔍 Key Configuration Details**  
 ✅ **Storage Account Key Authentication**: Ensures direct access to Azure Data Lake.  
 ✅ **Securely Enables Databricks to Read/Write Data**: Critical for large-scale processing in PySpark.  
 ✅ **Supports Data Pipelines for Synapse SQL & Power BI**: Seamless integration for analytics.  
@@ -73,21 +73,53 @@ The code initializes Spark settings with the **Azure Storage account key**, enab
 
 Below is a **PySpark script** used to load raw **car sales data** from **Azure Blob Storage** into a DataFrame in **Databricks**.  
 
-![PySpark Data Ingestion](path/to/image.png)  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)
+![PySpark Data Ingestion](path/to/image.png)  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
 
 
-### **🔍 Code Breakdown**  
-✅ Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
-✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
-✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.  
 
-Example code from the image:  
+🚗### 🔹 Loading Raw Data from Azure  
+The following script reads a CSV file into **PySpark**, ensuring proper data structure.  
+
+![PySpark Data Loading](path/to/image.png)
+
 ```python
 df = spark.read.format("csv").option("header", "true").load(
     "abfss://car-sales-data@carsalesreport.dfs.core.windows.net/raw-data/"
 )
 df.show()
 
+### **🔍 Code Breakdown**  
+✅ Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
+✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
+✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.
+
+# 🚗 Car Sales Data Cleaning & Schema Validation  
+
+Before loading data into **Synapse SQL**, we apply **data type conversions** and **encoding corrections** to ensure structured and optimized storage for analysis.  
+
+Below is a **PySpark script** demonstrating essential data cleaning steps before storing the dataset in **Synapse SQL** for analysis.  
+
+![PySpark Data Cleaning](path/to/image.png)
+![Screenshot 2025-06-10 130302](https://github.com/user-attachments/assets/2b0a3d67-c47e-49f7-b6bd-f1876e0353f9)
+
+
+The script applies key transformations, including:  
+- **Date Format Conversion:** Converts string-based dates into a proper `DateType` for optimized filtering.  
+- **Encoding Fixes:** Removes unwanted characters from text fields like `Engine`.  
+- **Schema Validation:** Confirms correct column data types before database ingestion.  
+
+---
+
+### 📌 Date Format Conversion  
+The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting.  
+
+```python
+df = df.withColumn("Date", to_date(col("Date"), "M/d/yyyy"))
+
+
+
+
+![Screenshot 2025-06-10 132054](https://github.com/user-attachments/assets/048be149-1c36-481f-b578-945e21def4fc)
 
 
 
