@@ -265,6 +265,7 @@ plt.title("Car Price Preferences by Gender")
 plt.xlabel("Gender")
 plt.ylabel("Price ($)")
 plt.show()'''
+
 ## 💎 Luxury Car Purchases by Gender
 
 The bar chart highlights the difference in luxury car purchases by gender.  
@@ -294,7 +295,8 @@ sns.barplot(x="Gender", y="count", data=sales_by_gender_luxury, palette="coolwar
 plt.title("Luxury Car Purchases by Gender")
 plt.xlabel("Gender")
 plt.ylabel("Total Sales")
-plt.show()'''
+plt.show()
+```
 
 
 
