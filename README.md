@@ -100,47 +100,7 @@ Below is a **PySpark script** demonstrating essential data cleaning steps before
 ---
 
 ## 📌 Date Format Conversion  
-The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting.  
-
-```python
-df = df.withColumn("Date", to_date(col("Date"), "M/d/yyyy"))
-
-![PySpark Data Loading](path/to/image.png)
-
-```python
-df = spark.read.format("csv").option("header", "true").load(
-    "abfss://car-sales-data@carsalesreport.dfs.core.windows.net/raw-data/"
-)
-df.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![Screenshot 2025-06-09 225832](https://github.com/user-attachments/assets/6b42be6d-e6b9-4eaf-8af3-084e01dacd06)
+The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting. 
 
 
 
