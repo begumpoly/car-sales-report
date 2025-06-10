@@ -42,7 +42,7 @@ The objective is to transform raw transactional data into meaningful business in
 4️⃣ **Analyze and Visualize in Power BI**  
 - Connect Synapse SQL to **Power BI dashboards** for real-time insights.  
 
-**Tech Stack**
+### Tech Stack
 ## 🚗 Step 2
  **Azure Databricks** → Data ingestion, ETL, and exploratory analysis
 ## 🔐 PySpark OAuth Configuration  
@@ -453,7 +453,7 @@ The trends imply varying gender preferences tied to body style over time.
 
 ![Car Sales Trend Over Time by Body Style and Gender]
 
-Try the code below to generate this visualization:
+Try the code below to generate the box plot showing car price preferences by gender:
 
 ```python
 # Convert Spark DataFrame to Pandas
@@ -547,6 +547,29 @@ print("Data successfully written to Azure Data Lake Storage!")
 - Retrieve insights from processed data
 
 This project puts data in the fast lane by combining the powerful engine of Databricks for data transformation with the sleek dashboard of Azure Synapse Analytics for real-time, SQL-driven analysis — delivering high-performance insights at every turn.
+## Customer Trend Analysis
+
+## Overview – Customer Type Distribution
+
+This section explains the **Total Customers** chart, which actually shows the distribution of customer types based on purchase frequency:
+
+- At **0** on the x-axis: **Returning Buyers** (1,853 customers)  
+- At **1** on the x-axis: **First-Time Buyers** (1,169 customers)  
+
+This clarifies that the chart reflects the proportion of returning vs. first-time customers, highlighting that returning buyers significantly outnumber first-time buyers.
+
+### Visualization
+Below is a screenshot of the "Total Customers" line graph generated from the query results:
+
+![Total Customers Line Graph]
+![Car_Sale_Query (2)](https://github.com/user-attachments/assets/cedc1e1a-f2d3-494d-a598-4aceffebb8d2)
+
+## Code Snapshot (Visualization Logic)
+
+Below is a screenshot showing the code used to generate the line chart:
+![Screenshot 2025-06-10 174759](https://github.com/user-attachments/assets/e6dd368c-ee92-459e-8455-1af5d2ba47a7)
+
+
 
 
 🧭 **Navigating Data Journeys with Power BI**
