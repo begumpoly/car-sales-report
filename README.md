@@ -84,6 +84,7 @@ df = spark.read.format("csv").option("header", "true").load(
 )
 df.show()
 
+
 ### **🔍 Code Breakdown**  
 ✅ Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
 ✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
