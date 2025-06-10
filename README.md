@@ -133,7 +133,8 @@ Below is a **visual breakdown** of car sales across various **dealer regions**, 
 
 ![Car Sales Distribution Pie Chart](path/to/pie_chart.png)
 
-![Screenshot 2025-06-10 143157](https://github.com/user-attachments/assets/09cf3d0f-3210-4564-80ed-0b924688d858)
+
+![Screenshot 2025-06-10 143157](https://github.com/user-attachments/assets/99b87468-58c2-44a9-8afd-2aa05264f518)
 
 ## Overview
 
@@ -151,7 +152,23 @@ Below is a sample **code snippet** used to generate the pie chart:
 
 ![Code for Generating Pie Chart](path/to/code_image.png)
 
-![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/e793f4be-088f-41d4-975e-3bca1255130b)
+```%python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Aggregate data by Dealer_Region
+region_sales = carsalesdata.groupBy("Dealer_Region").agg({"Price ($)": "sum"}).withColumnRenamed("sum(Price ($))", "Total_Sales")
+
+# Convert Spark DataFrame to Pandas DataFrame
+region_sales_pd = region_sales.toPandas()
+
+# Plot pie chart
+plt.figure(figsize=(10, 7))
+region_sales_pd.set_index("Dealer_Region").plot.pie(y="Total_Sales", autopct='%1.1f%%', startangle=90, cmap='viridis')
+plt.title("Car Sales Distribution by Dealer Region")
+plt.ylabel("")  # Hide the y-label
+plt.show()
+```
 
 ## 👥 Visual Breakdown: Sales by Gender
 
@@ -176,8 +193,21 @@ This breakdown provides useful insight into the **gender composition** of car bu
 Below is a sample **code snippet** used to generate the pie charts for this analysis:
 
 ![Code Snippet - Pie Chart Generation](path/to/code_snippet_image.png)
-![Screenshot 2025-06-10 145054](https://github.com/user-attachments/assets/1a79441c-5c6a-4926-a7ed-671015efe95f)
+```
+%python
+# Aggregate data by Gender
+gender_sales = carsalesdata.groupBy("Gender").agg({"Price ($)": "sum"}).withColumnRenamed("sum(Price ($))", "Total_Sales")
 
+# Convert Spark DataFrame to Pandas DataFrame
+gender_sales_pd = gender_sales.toPandas()
+
+# Plot pie chart
+plt.figure(figsize=(10, 7))
+gender_sales_pd.set_index("Gender").plot.pie(y="Total_Sales", autopct='%1.1f%%', startangle=90, cmap='viridis')
+plt.title("Car Sales Distribution by Gender")
+plt.ylabel("")  # Hide the y-label
+plt.show()
+```
 ---
 ## 🚗 Visual Breakdown: Sales by Body Style
 
@@ -206,7 +236,23 @@ Below is a sample **code snippet** used to generate the pie charts for this anal
 ![Code Snippet - Pie Chart Generation](path/to/code_snippet_image.png)
 
 ---
-![Screenshot 2025-06-10 142938](https://github.com/user-attachments/assets/526034d7-92cc-425d-99e3-a35194e607b7)
+```%python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Convert Spark DataFrame to Pandas DataFrame
+carsalesdata_pd = carsalesdata.toPandas()
+
+# Aggregate data by Body Style
+body_style_sales = carsalesdata_pd.groupby("Body Style")["Price ($)"].sum()
+
+# Plot pie chart
+plt.figure(figsize=(10, 7))
+body_style_sales.plot.pie(autopct='%1.1f%%', startangle=90, cmap='viridis')
+plt.title("Car Sales Distribution by Body Style")
+plt.ylabel("")  # Hide the y-label
+plt.show()
+```
 ## 📊 Total Car Sales by Company
 
 The bar chart shows total car sales for various companies.  
@@ -231,10 +277,20 @@ Sample code used to generate the bar chart, including data aggregation and plott
 
 ![Code Snippet](images/code_snippet.png)
 
-![Screenshot 2025-06-10 150414](https://github.com/user-attachments/assets/973c78f0-1bc8-4d6e-abb1-ff0c2f80cad7)
+```%python
+# Group by company and count sales
+sales_by_company = df.groupBy("Company").count().withColumnRenamed("count", "Total_Sales")
 
+# Convert to Pandas DataFrame for plotting
+sales_by_company_pd = sales_by_company.toPandas()
 
-![Screenshot 2025-06-10 150904](https://github.com/user-attachments/assets/d6cd4a9a-2e97-49dc-b185-1f52f418456d)
+# Plot Bar Chart
+plt.figure(figsize=(12,6))
+sns.barplot(x="Company", y="Total_Sales", data=sales_by_company_pd)
+plt.xticks(rotation=45)
+plt.title("Total Car Sales by Company")
+plt.show()
+```
 
 ## 📈 Scatter Plot of Price ($) vs Annual Income
 
@@ -250,8 +306,26 @@ Feel free to explore the code and visuals to better understand the trends in car
 Sample code used to generate the scatter plot.
 
 ![Code Snippet](images/code_snippet.png)
+```
+# Convert Spark DataFrame to Pandas DataFrame
+carsalesdata_pd = carsalesdata.toPandas()
 
-![Screenshot 2025-06-10 151923](https://github.com/user-attachments/assets/fa7b6fda-544c-42ea-a101-46189f66848b)
+# Plot scatter plot for Price ($) and Annual Income
+plt.figure(figsize=(10, 7))
+plt.scatter(carsalesdata_pd["Price ($)"], carsalesdata_pd["Annual Income"], color='blue', alpha=0.5)
+plt.title("Scatter Plot of Price ($) vs Annual Income")
+plt.xlabel("Price ($)")
+plt.ylabel("Annual Income")
+
+# Calculate the linear regression line
+x = carsalesdata_pd["Price ($)"]
+y = carsalesdata_pd["Annual Income"]
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, m*x + b, color='red')  # Add the linear line
+
+plt.show()
+```
+
 ## 📊 Car Price Preferences by Gender
 
 The box plot shows median car prices around $20,000–$25,000 for both genders, with similar purchase ranges.  
@@ -262,7 +336,9 @@ Both male and female buyers have outliers at higher prices (up to $80,000+), ind
 
 
 ![Screenshot 2025-06-10 152031](https://github.com/user-attachments/assets/c1d75f05-af14-4afa-b8a1-2facc331ced9)
+
 Try the code below to generate the box plot showing car price preferences by gender:
+![Code Snippet](images/code_snippet.png)
 
 ```python
 import matplotlib.pyplot as plt
