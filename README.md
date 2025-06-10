@@ -158,9 +158,10 @@ The following **pie chart** shows the distribution of car sales based on **buyer
 This breakdown provides useful insight into the **gender composition** of car buyers.
 
 ---
-![Screenshot 2025-06-10 142920](https://github.com/user-attachments/assets/c98810b1-e91c-4789-a913-1c3b42208e7c)
 
-## 🧾 Code Snippet (Chart Generation Logic)
+
+## 🧾![Screenshot 2025-06-10 141432](https://github.com/user-attachments/assets/25387b16-b3a4-457c-a726-a8703fc614b7)
+ Code Snippet (Chart Generation Logic)
 
 Below is a sample **code snippet** used to generate the pie charts for this analysis:
 
@@ -168,8 +169,36 @@ Below is a sample **code snippet** used to generate the pie charts for this anal
 ![Screenshot 2025-06-10 145054](https://github.com/user-attachments/assets/1a79441c-5c6a-4926-a7ed-671015efe95f)
 
 ---
+## 🚗 Visual Breakdown: Sales by Body Style
 
-Feel free to explore the code and visuals to better understand the trends in car sales by **region** and **gender**.
+The third **pie chart** illustrates car sales categorized by **body style**.
+
+![Car Sales by Body Style](path/to/body_style_pie_chart.png)
+
+![Screenshot 2025-06-10 142920](https://github.com/user-attachments/assets/6f7ee4dc-6cb0-49cd-9139-593f6bfb61a6)
+
+### 🔍 Key Observations
+
+- **SUV** is the most popular body style, making up **25.4%** of sales.  
+- **Hatchback** follows closely at **24.8%**.  
+- **Sedan** accounts for **19.9%** of sales.  
+- **Passenger cars** represent **17.0%** of sales.  
+- **Hardtop** is the least common, at **12.9%**.
+
+This analysis provides insight into **customer preferences** regarding car body styles.
+
+---
+
+## 🧾 Code Snippet (Chart Generation Logic)
+
+Below is a sample **code snippet** used to generate the pie charts for this analysis:
+
+![Code Snippet - Pie Chart Generation](path/to/code_snippet_image.png)
+
+---
+![Screenshot 2025-06-10 142938](https://github.com/user-attachments/assets/526034d7-92cc-425d-99e3-a35194e607b7)
+
+Feel free to explore the code and visuals to better understand the trends in car sales by **region**, **gender**, and **body style**.
 
 
 
