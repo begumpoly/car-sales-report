@@ -545,16 +545,41 @@ print("Data successfully written to Azure Data Lake Storage!")
 - - Connect to the Synapse workspace
 - Execute SQL queries
 - Retrieve insights from processed data
-
 This project puts data in the fast lane by combining the powerful engine of Databricks for data transformation with the sleek dashboard of Azure Synapse Analytics for real-time, SQL-driven analysis — delivering high-performance insights at every turn.
+
+## Moving Average of Daily Sales
+
+This table shows the **3-day moving average** of daily car sales, which includes the current day and the two preceding days. This method smooths out daily fluctuations to highlight short-term sales trends.
+
+### Key Observations:
+
+- On **2022-01-02**, the moving average was **35**
+- On **2022-01-03**, it dropped to **27**
+- On **2022-01-04**, it further decreased to **23**
+
+The moving average offers a clearer perspective on sales performance trends over time, providing better insights than raw daily figures alone.
+
+### Visualization
+
+Below is a screenshot of the "Total Customers" line graph generated from the query results:
+
+![Moving Average of Daily Sales]
+
+![Screenshot 2025-06-10 183415](https://github.com/user-attachments/assets/897b3527-320b-42f2-806e-4452c03c4199)
+
+![Car_Sale_Query (5)](https://github.com/user-attachments/assets/a6de0bcb-0a04-48ee-b86e-cc6a5d1af2bc)
+
+
+
+
 ## Customer Trend Analysis
 
-## Overview – Customer Type Distribution
+## Customer Type Distribution
 
 This section explains the **Total Customers** chart, which actually shows the distribution of customer types based on purchase frequency:
 
-- At **0** on the x-axis: **Returning Buyers** (1,853 customers)  
-- At **1** on the x-axis: **First-Time Buyers** (1,169 customers)  
+- At **0** on the x-axis: **Returning Buyers** (almost 1,900 customers)  
+- At **1** on the x-axis: **First-Time Buyers** (1,200 customers)  
 
 This clarifies that the chart reflects the proportion of returning vs. first-time customers, highlighting that returning buyers significantly outnumber first-time buyers.
 
