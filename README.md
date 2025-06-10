@@ -76,7 +76,7 @@ spark.conf.set("fs.azure.account.key.carsalesreport.dfs.core.windows.net", "<YOU
 ```
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
-🚗### **🔍 Key Configuration Details**  
+🚗**🔍 Key Configuration Details**  
 ✅ **Storage Account Key Authentication**: Ensures direct access to Azure Data Lake.  
 ✅ **Securely Enables Databricks to Read/Write Data**: Critical for large-scale processing in PySpark.  
 ✅ **Supports Data Pipelines for Synapse SQL & Power BI**: Seamless integration for analytics.  
@@ -117,7 +117,7 @@ Below is the schema of the **PySpark DataFrame** used in this project, displayin
 
 ![Screenshot 2025-06-10 140354](https://github.com/user-attachments/assets/9edfc865-4447-4cba-ab26-49b1a626545e)
 
-##🚗Rows
+🚗**Rows**
 
 ![Screenshot 2025-06-10 140857](https://github.com/user-attachments/assets/fccd7cb5-6817-4518-a5e6-14dc1a179a2a)
 
@@ -132,8 +132,6 @@ Below is the schema of the **PySpark DataFrame** used in this project, displayin
 # Car Sales Distribution by Dealer Region
 
 Below is a **visual breakdown** of car sales across various **dealer regions**, presented in the form of a **pie chart** for quick and effective insight.
-
-![Car Sales Distribution Pie Chart]
 
 ![Screenshot 2025-06-10 143157](https://github.com/user-attachments/assets/99b87468-58c2-44a9-8afd-2aa05264f518)
 
@@ -150,8 +148,6 @@ This visualization provides a clear perspective on **regional sales performance*
 ## Code Snippet (Visualization Logic)
 
 Below is a sample **code snippet** used to generate the pie chart:
-
-![Code for Generating Pie Chart]
 
 ```%python
 import pandas as pd
@@ -175,8 +171,6 @@ plt.show()
 
 The following **pie chart** shows the distribution of car sales based on **buyer gender**.
 
-![Car Sales by Gender]
-
 
 ### 🔍 Key Observations
 
@@ -189,11 +183,9 @@ This breakdown provides useful insight into the **gender composition** of car bu
 
 
 ## 🧾![Screenshot 2025-06-10 141432](https://github.com/user-attachments/assets/25387b16-b3a4-457c-a726-a8703fc614b7)
- Code Snippet (Chart Generation Logic)
 
 Below is a sample **code snippet** used to generate the pie charts for this analysis:
 
-![Code Snippet - Pie Chart Generation]
 ```
 %python
 # Aggregate data by Gender
@@ -214,8 +206,6 @@ plt.show()
 
 The third **pie chart** illustrates car sales categorized by **body style**.
 
-![Car Sales by Body Style])
-
 ![Screenshot 2025-06-10 142920](https://github.com/user-attachments/assets/6f7ee4dc-6cb0-49cd-9139-593f6bfb61a6)
 
 ### 🔍 Key Observations
@@ -229,12 +219,7 @@ The third **pie chart** illustrates car sales categorized by **body style**.
 This analysis provides insight into **customer preferences** regarding car body styles.
 
 ---
-
-## 🧾 Code Snippet (Chart Generation Logic)
-
 Below is a sample **code snippet** used to generate the pie charts for this analysis:
-
-![Code Snippet - Pie Chart Generation]
 
 ---
 ```%python
@@ -259,7 +244,6 @@ plt.show()
 The bar chart shows total car sales for various companies.  
 **Chevrolet** leads with over 1750 units sold, followed by **Toyota** and **Nissan** with sales above 1500.
 
-![Total Car Sales by Company]
 ![Screenshot 2025-06-10 150323](https://github.com/user-attachments/assets/103d1bb4-35fd-407b-afe6-bf89cad5ffd7)
 
 
@@ -276,7 +260,6 @@ This visualization highlights the sales performance across different car manufac
 
 Sample code used to generate the bar chart, including data aggregation and plotting.
 
-![Code Snippet]
 
 ```%python
 # Group by company and count sales
@@ -303,10 +286,6 @@ There’s a wide price range across income levels, with little strong correlatio
 ![Screenshot 2025-06-10 150947](https://github.com/user-attachments/assets/6f212df5-58a8-4ebb-aca6-b503c98e2627)
 Feel free to explore the code and visuals to better understand the trends in car sales by **region**, **gender**, and **body style**, **Annual Income**.
 ## 🧾 Code Snippet
-
-Sample code used to generate the scatter plot.
-
-![Code Snippet]
 ```
 # Convert Spark DataFrame to Pandas DataFrame
 carsalesdata_pd = carsalesdata.toPandas()
@@ -332,11 +311,9 @@ plt.show()
 The box plot shows median car prices around $20,000–$25,000 for both genders, with similar purchase ranges.  
 Both male and female buyers have outliers at higher prices (up to $80,000+), indicating some buy more expensive cars.
 
-![Car Price by Gender]
 ![Screenshot 2025-06-10 152031](https://github.com/user-attachments/assets/c1d75f05-af14-4afa-b8a1-2facc331ced9)
 
 Try the code below to generate the box plot showing car price preferences by gender:
-![Code Snippet]
 
 ```python
 import matplotlib.pyplot as plt
@@ -357,8 +334,6 @@ plt.show()
 The bar chart highlights the difference in luxury car purchases by gender.  
 Male buyers account for over 2000 units, while female buyers show significantly lower totals (around 500–600).  
 This chart highlights a notable disparity in luxury car purchasing between genders, with males dominating this segment.
-
-![Luxury Car Purchases by Gender]
 
 Try the code below to generate this bar chart:
 
@@ -389,8 +364,6 @@ The bar chart illustrates the average car price by gender.
 Both female and male buyers spend approximately $27,500 on average, suggesting nearly identical overall spending.  
 This chart provides insight into average purchase behavior, regardless of luxury preferences.
 
-![Average Car Price by Gender]
-
 ![Screenshot 2025-06-10 155243](https://github.com/user-attachments/assets/12ad93c1-7e6b-4cdd-8d8d-487e7360176e)
 
 Try the code below to generate this visualization:
@@ -411,8 +384,6 @@ plt.show()
 The bar chart displays total car sales segmented by both body style and gender.  
 Male buyers consistently purchase more cars across all body styles. SUVs and Hatchbacks are the most popular for both genders, followed by Sedans.  
 This chart provides a clear view of body style preferences further broken down by gender.
-
-![Car Sales by Body Style and Gender]
 
 ![Screenshot 2025-06-10 160001](https://github.com/user-attachments/assets/3d388d1a-42b6-429c-ba58-5cd217fbd5a2)
 
