@@ -322,6 +322,76 @@ plt.xlabel("Gender")
 plt.ylabel("Avg Price ($)")
 plt.show()
 ```
+## 🚘 Car Sales by Body Style and Gender
+
+The bar chart displays total car sales segmented by both body style and gender.  
+Male buyers consistently purchase more cars across all body styles. SUVs and Hatchbacks are the most popular for both genders, followed by Sedans.  
+This chart provides a clear view of body style preferences further broken down by gender.
+
+![Car Sales by Body Style and Gender](images/car_sales_by_body_style_and_gender.png)
+
+![Screenshot 2025-06-10 160001](https://github.com/user-attachments/assets/3d388d1a-42b6-429c-ba58-5cd217fbd5a2)
+
+Try the code below to generate this visualization:
+
+```python
+# Convert Spark DataFrame to Pandas
+sales_by_body_style_gender_pd = sales_by_body_style_gender.toPandas()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(12,6))
+sns.barplot(
+    x="Body Style",
+    y="Total_Sales",
+    hue="Gender",
+    data=sales_by_body_style_gender_pd,
+    palette="coolwarm"
+)
+
+plt.xticks(rotation=45)
+plt.title("Car Sales by Body Style and Gender")
+plt.xlabel("Body Style")
+plt.ylabel("Total Sales")
+plt.legend(title="Gender")
+plt.show()
+```
+
+## 📈 Car Sales Trend Over Time by Body Style and Gender
+
+This line graph illustrates car sales trends from early 2022 to early 2023 across different body styles.  
+SUVs show the strongest growth, while Sedans and Hatchbacks remain stable or increase gradually.  
+The trends imply varying gender preferences tied to body style over time.
+
+![Car Sales Trend Over Time by Body Style and Gender](images/sales_trend_by_body_style_and_gender.png)
+
+Try the code below to generate this visualization:
+
+```python
+# Convert Spark DataFrame to Pandas
+sales_trend_pd = sales_trend.toPandas()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(12,6))
+sns.lineplot(
+    x="Year",
+    y="Sales_Count",
+    hue="Body Style",
+    data=sales_trend_pd,
+    marker="s"
+)
+
+plt.title("Car Sales Trend Over Time by Body Style and Gender")
+plt.xlabel("Year")
+plt.ylabel("Total Sales")
+plt.xticks(rotation=45)
+plt.legend(title="Body Style & Gender")
+plt.show()
+```
+
 
 
 
