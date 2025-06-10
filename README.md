@@ -83,7 +83,7 @@ The following script reads a CSV file into **PySpark**, ensuring proper data str
 ✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
 ✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.
 
-## 🚀 Data Cleaning & Schema Validation  
+## 🚗 Data Cleaning & Schema Validation  
 
 Before loading data into **Synapse SQL**, we apply **data type conversions** and **encoding corrections** to ensure structured and optimized storage for analysis.  
 
@@ -101,9 +101,36 @@ Below is a **PySpark script** demonstrating essential data cleaning steps before
 The `Date` column is originally stored as a string (`M/d/yyyy`). Using `to_date()`, we convert it into a **proper DateType** for advanced filtering and sorting. 
 ## 📌 Schema Overview  
 Below is the schema of the **PySpark DataFrame** used in this project, displaying column names, data types, and nullability.
-![Schema]
+
 ![Screenshot 2025-06-10 140354](https://github.com/user-attachments/assets/9edfc865-4447-4cba-ab26-49b1a626545e)
 
+##🚗Rows
+
+
+
+![Screenshot 2025-06-10 140857](https://github.com/user-attachments/assets/fccd7cb5-6817-4518-a5e6-14dc1a179a2a)
+
+**Python Code for Data Analysis**  
+- Imports essential libraries (`pandas`, `numpy`, `seaborn`, `matplotlib`).  
+- Sets `seaborn` style for clean visuals.  
+- Ensures inline plot rendering in notebooks.  
+- Converts a Spark DataFrame to a Pandas DataFrame (`df.toPandas()`).  
+- Checks data types and previews the dataset (`print(pdf.dtypes)`, `print(pdf.head())`).
+- 
+# Car Sales Distribution by Dealer Region
+
+This repository provides a visual representation of car sales distributed across various dealer regions, showcased through a pie chart.
+
+## Overview
+
+The pie chart illustrates the percentage contribution of each dealer region to the total car sales. Key insights include:
+
+- **Janesville** holds the largest share, accounting for **15.8%** of total sales.  
+- **Scottsdale** and **Aurora** follow with **14.3%** and **13.2%** respectively.  
+- **Pasco**, **Greenville**, and **Middletown** display comparable sales figures, contributing **13.1%** and **13.0%** each.
+
+This visualization offers a clear perspective on regional sales performance, aiding in data-driven analysis and strategic planning.
+![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/e793f4be-088f-41d4-975e-3bca1255130b)![Screenshot 2025-06-10 143214](https://github.com/user-attachments/assets/63983444-d79c-4285-ac48-1b6044c174de)
 
 
 
