@@ -103,7 +103,7 @@ Before loading data into **Synapse SQL**, we apply **data type conversions** and
 
 Below is a **PySpark script** demonstrating essential data cleaning steps before storing the dataset in **Synapse SQL** for analysis.  
 
-![PySpark Data Cleaning](path/to/image.png)  
+![PySpark Data Cleaning]
 ![Screenshot 2025-06-10 130302](https://github.com/user-attachments/assets/2b0a3d67-c47e-49f7-b6bd-f1876e0353f9)  
 
 ### ✨ Key Transformations  
