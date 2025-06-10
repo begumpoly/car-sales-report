@@ -21,6 +21,7 @@ The objective is to transform raw transactional data into meaningful business in
 
 ## 🧰 Tech Stack
 
+
 - **Azure Databricks**: For data ingestion, transformation (ETL), and exploratory analysis
 - **Azure Synapse SQL**: For structured querying and optimized data warehousing
 - **Power BI**: For creating dynamic, interactive visualizations and business dashboards
@@ -42,6 +43,9 @@ The objective is to transform raw transactional data into meaningful business in
 4️⃣ **Analyze and Visualize in Power BI**  
 - Connect Synapse SQL to **Power BI dashboards** for real-time insights.  
 
+**Tech Stack**
+## 🚗 Step 2
+ **Azure Databricks** → Data ingestion, ETL, and exploratory analysis
 ## 🔐 PySpark OAuth Configuration  
 
 Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  ![PySpark Authentication Setup](path/to/image.png) 
@@ -116,10 +120,9 @@ Below is the schema of the **PySpark DataFrame** used in this project, displayin
 
 ##🚗Rows
 
-
-
 ![Screenshot 2025-06-10 140857](https://github.com/user-attachments/assets/fccd7cb5-6817-4518-a5e6-14dc1a179a2a)
 
+## Exploratory Data Analysis
 **Python Code for Data Analysis**  
 - Imports essential libraries (`pandas`, `numpy`, `seaborn`, `matplotlib`).  
 - Sets `seaborn` style for clean visuals.  
@@ -537,6 +540,20 @@ spark.conf.set(
 df.write.option("header", 'true').csv(data_path)
 
 print("Data successfully written to Azure Data Lake Storage!")
+````
+**Tech Stack**
+## Step 2: Query Data in Azure Synapse
+- Connect to the Synapse workspace
+- Execute SQL queries
+- Retrieve insights from processed data
+
+
+
+
+
+
+
+
 
 
 
