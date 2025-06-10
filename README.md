@@ -46,7 +46,8 @@ The objective is to transform raw transactional data into meaningful business in
 
 Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  
 
-![PySpark Authentication Setup]![Screenshot 2025-06-10 103954](https://github.com/user-attachments/assets/c978ae98-c39f-4e66-9d79-89521f2a09e0)
+![PySpark Authentication Setup](path/to/image.png) 
+![Screenshot 2025-06-10 103954](https://github.com/user-attachments/assets/c978ae98-c39f-4e66-9d79-89521f2a09e0)
 
 
 The script initializes authentication using **Azure Active Directory**, specifying:  
@@ -60,7 +61,7 @@ This ensures that Databricks securely interacts with Azure **without exposing cr
 
 Below is a **PySpark configuration snippet**, demonstrating how to set up **Azure Data Lake Storage authentication** in **Databricks**.  
 
-![Azure Data Lake Access Setup]!(path/to/image.png)  
+![Azure Data Lake Access Setup](path/to/image.png) 
 ![Screenshot 2025-06-10 105153](https://github.com/user-attachments/assets/9d2bc243-ff34-4889-9875-5e3cf1b8f3d2)
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
