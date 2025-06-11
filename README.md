@@ -419,7 +419,6 @@ This line graph illustrates car sales trends from early 2022 to early 2023 acros
 SUVs show the strongest growth, while Sedans and Hatchbacks remain stable or increase gradually.  
 The trends imply varying gender preferences tied to body style over time.
 
-![Car Sales Trend Over Time by Body Style and Gender]
 
 Try the code below to generate the box plot showing car price preferences by gender:
 
@@ -514,6 +513,49 @@ print("Data successfully written to Azure Data Lake Storage!")
 - Execute SQL queries
 - Retrieve insights from processed data
 This project puts data in the fast lane by combining the powerful engine of Databricks for data transformation with the sleek dashboard of Azure Synapse Analytics for real-time, SQL-driven analysis — delivering high-performance insights at every turn.
+##  – Most Popular Car Colors
+
+This bar chart presents the **total sales by car color**, offering insights into customer color preferences across the dataset.
+
+### Key Observations:
+
+- **Pale White** is the most popular car color, with sales exceeding **10,000 units**.
+- **Black** ranks second, with approximately **7,500 units sold**.
+- **Red** is the least preferred among the three, with sales under **5,000 units**.
+
+### Insights:
+
+- The data reflects **strong customer preference** for neutral and classic colors like white and black.
+- These insights can inform **inventory planning**, **color-based promotions**, and **design decisions** in the automotive sector.
+
+![Screenshot 2025-06-10 194142](https://github.com/user-attachments/assets/5675af57-2bec-453f-97f3-deafb07dc011)
+
+*A screenshot of the bar chart inserted here to visually support the analysis of color preferences.*
+
+### Identify Seasonal Trends to see which months contribute the most to overall sales:
+ Sales show strong holiday-driven peaks in November (3,470) and December (3,546), followed by post-holiday slowdowns in January (790) 
+and February (735). Additionally, a consistent decline from Month 0 (~12 units) to Month 10 (~1 unit) suggests possible market
+ saturation or seasonal demand shifts. Strategic pricing and marketing adjustments could help balance these fluctuations.
+ 
+![SQL script 2](https://github.com/user-attachments/assets/50d7be1c-c79f-4ad9-825b-3f6be5dd51d1)
+
+### Customer Segmentation by Income (SQL Analysis)
+
+- **Luxury Buyers** (Annual Income > $80,000): Highest average spending — **~$64,481**
+- **Mid-Level Buyers** ($40,000–$80,000): Moderate average spending — **~$29,746**
+- **Budget Buyers** (< $40,000): Lowest average spending — **~$15,586**
+
+This segmentation reveals distinct spending behaviors tied to income levels, useful for optimizing **marketing focus and pricing strategies**.
+![Screenshot 2025-06-10 201056](https://github.com/user-attachments/assets/342eaa0f-6c56-48bc-8063-76ffc0f87404)
+
+# Overview – Most Popular Car Models by Total Purchases
+
+The chart highlights high-performing models like 'Corolla', 'Diamante', and 'Wrangler' with purchase counts nearing 220–260 units, while many others show low sales, reflecting a long-tail distribution in model popularity.
+**visualization**
+![Screenshot 2025-06-10 200503](https://github.com/user-attachments/assets/af905323-0ac3-46c1-946c-aa00acfccbe1)
+## SQL Query:
+#![Screenshot 2025-06-10 200805](https://github.com/user-attachments/assets/3c0db683-bee1-435b-9242-3c67fd7588fb)
+
 ## Overview – Top Dealers by Sales
 
 This table highlights the **top-performing car dealers** based on their total number of sales and associated regions.
@@ -531,9 +573,6 @@ This table highlights the **top-performing car dealers** based on their total nu
 
 - The top dealers are **geographically diverse**, indicating strong performance is not limited to a specific region.
 - This data helps businesses identify **high-value partnerships** and focus areas for **regional sales strategies**.
-
----
-
 
 ![Screenshot 2025-06-10 192548](https://github.com/user-attachments/assets/dfc042b0-ebe2-43ac-8865-302226babcd6)
 
@@ -613,11 +652,9 @@ This clarifies that the chart reflects the proportion of returning vs. first-tim
 ### Visualization
 Below is a screenshot of the "Total Customers" line graph generated from the query results:
 
-![Total Customers Line Graph]
 ![Car_Sale_Query (2)](https://github.com/user-attachments/assets/cedc1e1a-f2d3-494d-a598-4aceffebb8d2)
 
 ## Code Snapshot (Visualization Logic)
-
 Below is a screenshot showing the code used to generate the line chart:
 ![Screenshot 2025-06-10 174759](https://github.com/user-attachments/assets/e6dd368c-ee92-459e-8455-1af5d2ba47a7)
 
