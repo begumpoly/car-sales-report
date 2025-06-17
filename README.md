@@ -43,7 +43,6 @@ The objective is to transform raw transactional data into meaningful business in
 - Connect Synapse SQL to **Power BI dashboards** for real-time insights.  
 
 ### Tech Stack
-## 🚗 Step 2
  **Azure Databricks** → Data ingestion, ETL, and exploratory analysis
 ## 🔐 PySpark OAuth Configuration  
 
@@ -507,7 +506,7 @@ df.write.option("header", 'true').csv(data_path)
 print("Data successfully written to Azure Data Lake Storage!")
 ````
 **Tech Stack**
-## Step 2: Query Data in Azure Synapse
+## Query Data in Azure Synapse
 - 🚗 **Driving Data Insights with Azure Synapse Analytics**
 - - Connect to the Synapse workspace
 - Execute SQL queries
@@ -661,7 +660,7 @@ Below is a screenshot showing the code used to generate the line chart:
 
 
 
-🧭 **Navigating Data Journeys with Power BI**
+🚗 **Navigating Data Journeys with Power BI**
 
 After tuning the data engine in Databricks and cruising through analysis in Azure Synapse Analytics, this project reaches its destination with dynamic, interactive dashboards in Power BI — providing a clear, visual roadmap of business performance.
 
