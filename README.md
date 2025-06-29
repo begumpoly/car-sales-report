@@ -333,6 +333,8 @@ plt.show()
 The bar chart highlights the difference in luxury car purchases by gender.  
 Male buyers account for over 2000 units, while female buyers show significantly lower totals (around 500–600).  
 This chart highlights a notable disparity in luxury car purchasing between genders, with males dominating this segment.
+![Screenshot 2025-06-10 153409](https://github.com/user-attachments/assets/b3e6e3f8-dc4d-490f-a74e-eea6e419fc0a)
+
 
 Try the code below to generate this bar chart:
 
