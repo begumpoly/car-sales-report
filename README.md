@@ -507,7 +507,7 @@ df.write.option("header", 'true').csv(data_path)
 
 print("Data successfully written to Azure Data Lake Storage!")
 ````
-**Tech Stack**
+### Tech Stack
 ## Query Data in Azure Synapse
 - 🚗 **Driving Data Insights with Azure Synapse Analytics**
 - - Connect to the Synapse workspace
