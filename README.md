@@ -46,7 +46,9 @@ The objective is to transform raw transactional data into meaningful business in
  **Azure Databricks** → Data ingestion, ETL, and exploratory analysis
 ## 🔐 PySpark OAuth Configuration  
 
-Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks.  ![PySpark Authentication Setup] 
+Below is a **PySpark script** demonstrating how to set up **OAuth 2.0 authentication** for secure access to **Azure Data Lake** in Databricks. 
+
+### PySpark Authentication Setup
 ```
 spark.conf.set("fs.azure.account.auth.type.<storage-account>.dfs.core.windows.net", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type.<storage-account>.dfs.core.windows.net", 
@@ -84,7 +86,8 @@ The code initializes Spark settings with the **Azure Storage account key**, enab
 
 Below is a **PySpark script** used to load raw **car sales data** from **Azure Blob Storage** into a DataFrame in **Databricks**.  
 
-![PySpark Data Ingestion]  ![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
+### PySpark Data Ingestion
+![Screenshot 2025-06-10 113441](https://github.com/user-attachments/assets/ac7a53f6-cf4e-40f5-8486-888383e1fbb5)  
 
 # 🚗 Car Sales Data Processing in PySpark
 
@@ -101,7 +104,7 @@ Before loading data into **Synapse SQL**, we apply **data type conversions** and
 
 Below is a **PySpark script** demonstrating essential data cleaning steps before storing the dataset in **Synapse SQL** for analysis.  
 
-![PySpark Data Cleaning]
+### PySpark Data Cleaning
 ![Screenshot 2025-06-10 130302](https://github.com/user-attachments/assets/2b0a3d67-c47e-49f7-b6bd-f1876e0353f9)  
 
 ### ✨ Key Transformations  
