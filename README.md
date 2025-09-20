@@ -131,7 +131,7 @@ Below is the schema of the **PySpark DataFrame** used in this project, displayin
 - Ensures inline plot rendering in notebooks.  
 - Converts a Spark DataFrame to a Pandas DataFrame (`df.toPandas()`).  
 - Checks data types and previews the dataset (`print(pdf.dtypes)`, `print(pdf.head())`).
-- 
+  
 # Car Sales Distribution by Dealer Region
 
 Below is a **visual breakdown** of car sales across various **dealer regions**, presented in the form of a **pie chart** for quick and effective insight.
