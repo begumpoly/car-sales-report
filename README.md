@@ -453,7 +453,7 @@ plt.show()
 
 ## Data Transformation
 
-This section covers the process of transforming raw data using PySpark. After reading the data from Azure Data Lake Storage, you can perform various data cleansing, filtering, and aggregation operations before saving the processed data back to the lake.
+This section covers the process of transforming raw data using PySpark. After reading the data from Azure Data Lake Storage, we can perform various data cleansing, filtering, and aggregation operations before saving the processed data back to the lake.
 
 Below is an example illustrating how to read the raw data, apply transformations, and configure the connection securely.
 
@@ -677,7 +677,7 @@ After tuning the data engine in Databricks and cruising through analysis in Azur
 
 
 
-# Conclusion: Accelerating Strategic Insights in the Automotive Industry 🏁
+# Conclusion: Accelerating Strategic Insights in the Automotive Industry 
 
 This project successfully transforms raw transactional data into powerful business intelligence that fuels strategic decision-making within the automotive sector. Through a streamlined pipeline leveraging **Databricks**, **Azure Synapse Analytics**, and **Power BI**, we unlocked deep insights across key dimensions:
 
