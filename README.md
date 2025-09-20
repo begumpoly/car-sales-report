@@ -77,7 +77,7 @@ spark.conf.set("fs.azure.account.key.carsalesreport.dfs.core.windows.net", "<YOU
 ```
 
 The code initializes Spark settings with the **Azure Storage account key**, enabling secure access to the **carsalesreport Data Lake**. This setup allows Databricks to read and write data stored in Azure efficiently.  
-🚗** Key Configuration Details**  
+## Key Configuration Details
  **Storage Account Key Authentication**: Ensures direct access to Azure Data Lake.  
  **Securely Enables Databricks to Read/Write Data**: Critical for large-scale processing in PySpark.  
  **Supports Data Pipelines for Synapse SQL & Power BI**: Seamless integration for analytics.  
