@@ -94,9 +94,9 @@ Below is a **PySpark script** used to load raw **car sales data** from **Azure B
 The following script reads a CSV file into **PySpark**, ensuring proper data structure.  
 
 ## 🔍 Code Breakdown  
-✅ Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
-✅ Applies `.option("header", "true")` to ensure headers are correctly recognized.  
-✅ Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.
+- Uses `spark.read.format("csv")` to load CSV files from Azure Data Lake.  
+- Applies `.option("header", "true")` to ensure headers are correctly recognized.  
+- Displays the dataset with `.show()`, showcasing key attributes like **Car Model, Price, Transmission Type, and Customer Details**.
 
 ## 🚗 Data Cleaning & Schema Validation  
 
